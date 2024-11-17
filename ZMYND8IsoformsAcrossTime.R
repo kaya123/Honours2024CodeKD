@@ -210,15 +210,16 @@ rowAnn <- data.frame(row.names = rownames(exprTr),
                      D20vsD60 = factor(rownames(exprTr) %in% sigD20D60, levels = c("TRUE", "FALSE")))
 
 
-pheatmap(adjusted_merged.wt, annotation_row = rowAnn, annotation_col = colAnn, 
+p <- pheatmap(adjusted_merged.wt, annotation_row = rowAnn, annotation_col = colAnn, 
               annotation_colors = list(iPSCvsD20 = c("TRUE" = "darkgreen",
                                                      "FALSE" = "white"),
                                        D20vsD60 = c("TRUE" = "darkolivegreen",
                                                     "FALSE" = "lightgrey")),
               annotation_names_row = FALSE,
               annotation_names_col = FALSE,
+              silent = TRUE,
               cutree_cols = 4,
               clustering_callback = callback)
-ggarrange(p$table)
+ggarrange(p$gtable)
 ggsave(paste0(inDir, "Kaya_thesis/isoformPheatmapSupplementary.png"), device = "png",
        height = 6, width = 7, bg = "white")
