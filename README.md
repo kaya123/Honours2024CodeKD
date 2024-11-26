@@ -1,5 +1,5 @@
 # Honours2024CodeKD
-All scripts used in "Investigating gene expression changes caused by ZMYND8 knock-out in human brain organoids" by Kaya Dahlke in the Voineagu lab
+All scripts for the honours thesis "Investigating gene expression changes caused by ZMYND8 knock-out in human brain organoids" by Kaya Dahlke in the Voineagu lab
 
 ## rnaseqOutputPreprocessing.R
 Script taking in nf-core/RNA-seq output and filtering to create an RDS file with main input for future scripts. 
